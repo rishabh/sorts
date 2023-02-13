@@ -8,8 +8,9 @@ package sorts_test
 
 import (
 	"fmt"
-	"github.com/twotwotwo/sorts"
-	"github.com/twotwotwo/sorts/sortutil"
+
+	"github.com/rishabh/sorts"
+	"github.com/rishabh/sorts/sortutil"
 )
 
 type City struct {

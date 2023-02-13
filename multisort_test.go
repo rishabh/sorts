@@ -4,10 +4,13 @@
 
 package sorts_test
 
-import . "github.com/twotwotwo/sorts"
-import . "github.com/twotwotwo/sorts/sortutil"
-import "strconv"
-import "sort"
+import (
+	"sort"
+	"strconv"
+
+	. "github.com/rishabh/sorts"
+	. "github.com/rishabh/sorts/sortutil"
+)
 
 // Helpers to sort in different ways: with the quicksort cutoff lowered or
 // raised (to exercise radix code more or less), and sorting ints as uints,

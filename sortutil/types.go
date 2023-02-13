@@ -1,5 +1,6 @@
 // Copyright 2009 The Go Authors.
 // Copyright 2015 Randall Farmer.
+// Copyright 2023 Rishabh Moudgil.
 // All rights reserved.
 
 // Use of this source code is governed by a BSD-style
@@ -14,7 +15,7 @@ import (
 	"math"
 	"sort"
 
-	"github.com/twotwotwo/sorts"
+	"github.com/rishabh/sorts"
 )
 
 // Float32Key generates a uint64 key from a float32. Use with Float32Less.

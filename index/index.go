@@ -12,7 +12,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/twotwotwo/sorts"
+	"github.com/rishabh/sorts"
 )
 
 type Index struct {

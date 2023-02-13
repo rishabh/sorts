@@ -8,7 +8,8 @@ package sorts_test
 
 import (
 	"fmt"
-	"github.com/twotwotwo/sorts/sortutil"
+
+	"github.com/rishabh/sorts/sortutil"
 )
 
 func Example_strings() {

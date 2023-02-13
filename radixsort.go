@@ -1,4 +1,5 @@
 // Copyright 2014-5 Randall Farmer. All rights reserved.
+// Copyright 2023 Rishabh Moudgil.
 
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -39,7 +40,7 @@ func ByUint64(data Uint64Interface) {
 		qSort(data, 0, l)
 		return
 	}
-	
+
 	shift := guessIntShift(data, l)
 	parallelSort(data, radixSortUint64, task{offs: int(shift), end: l})
 

@@ -1,5 +1,6 @@
 // Copyright 2009 The Go Authors.
 // Copyright 2014-5 Randall Farmer.
+// Copyright 2023 Rishabh Moudgil.
 // All rights reserved.
 
 // Use of this source code is governed by a BSD-style
@@ -18,8 +19,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	. "github.com/twotwotwo/sorts"
-	. "github.com/twotwotwo/sorts/sortutil"
+	. "github.com/rishabh/sorts"
+	. "github.com/rishabh/sorts/sortutil"
 )
 
 // check the IsSorted checks with a type that will never look sorted

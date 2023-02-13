@@ -12,7 +12,7 @@ import (
 	"sort"
 	"testing"
 
-	. "github.com/twotwotwo/sorts/sortutil"
+	. "github.com/rishabh/sorts/sortutil"
 )
 
 // we need enough elements that radix sort will kick in, or we're not
