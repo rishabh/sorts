@@ -29,3 +29,6 @@ helped make this possible.
 
 I'd love to hear if you're using this. E-mail me at my github username at
 GMail, or say hey on Twitter ([@rf](http://twitter.com/rf/)).
+
+# Modifications
+This is a fork of https://github.com/twotwotwo/sorts that supports parallel radix sorting using a Uint128 key.
