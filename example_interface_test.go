@@ -4,13 +4,10 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package sorts_test
+package sorts
 
 import (
 	"fmt"
-
-	"github.com/rishabh/sorts"
-	"github.com/rishabh/sorts/sortutil"
 )
 
 type City struct {
@@ -33,10 +30,10 @@ func (a ByLatitude) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
 
 // Key returns a uint64 that is lower for more southerly latitudes.
 func (a ByLatitude) Key(i int) uint64 {
-	return sortutil.Float32Key(a[i].Latitude)
+	return Float32Key(a[i].Latitude)
 }
 func (a ByLatitude) Less(i, j int) bool {
-	return sortutil.Float32Less(a[i].Latitude, a[j].Latitude)
+	return Float32Less(a[i].Latitude, a[j].Latitude)
 }
 
 func Example() {
@@ -48,7 +45,7 @@ func Example() {
 	}
 
 	fmt.Println(cities)
-	sorts.ByUint64(ByLatitude(cities))
+	ByUint64(ByLatitude(cities))
 	fmt.Println(cities)
 
 	// Output:

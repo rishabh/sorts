@@ -2,14 +2,11 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package sorts_test
+package sorts
 
 import (
 	"sort"
 	"strconv"
-
-	. "github.com/rishabh/sorts"
-	. "github.com/rishabh/sorts/sortutil"
 )
 
 // Helpers to sort in different ways: with the quicksort cutoff lowered or

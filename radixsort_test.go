@@ -6,7 +6,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package sorts_test
+package sorts
 
 import (
 	"bytes"
@@ -18,9 +18,6 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-
-	. "github.com/rishabh/sorts"
-	. "github.com/rishabh/sorts/sortutil"
 )
 
 // check the IsSorted checks with a type that will never look sorted

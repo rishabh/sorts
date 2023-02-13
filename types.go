@@ -8,14 +8,12 @@
 
 // Package sortutil sorts and searches common slice types (and helps sort
 // floats).
-package sortutil
+package sorts
 
 import (
 	"bytes"
 	"math"
 	"sort"
-
-	"github.com/rishabh/sorts"
 )
 
 // Float32Key generates a uint64 key from a float32. Use with Float32Less.
@@ -53,7 +51,7 @@ func (p IntSlice) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
 func (p IntSlice) Key(i int) int64 { return int64(p[i]) }
 
 // Sort is a convenience method.
-func (p IntSlice) Sort() { sorts.ByInt64(p) }
+func (p IntSlice) Sort() { ByInt64(p) }
 
 // Int32Slice attaches the methods of Uint64Interface to []int32, sorting in increasing order.
 type Int32Slice []int32
@@ -66,7 +64,7 @@ func (p Int32Slice) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
 func (p Int32Slice) Key(i int) int64 { return int64(p[i]) }
 
 // Sort is a convenience method.
-func (p Int32Slice) Sort() { sorts.ByInt64(p) }
+func (p Int32Slice) Sort() { ByInt64(p) }
 
 // Int64Slice attaches the methods of Uint64Interface to []int64, sorting in increasing order.
 type Int64Slice []int64
@@ -79,7 +77,7 @@ func (p Int64Slice) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
 func (p Int64Slice) Key(i int) int64 { return p[i] }
 
 // Sort is a convenience method.
-func (p Int64Slice) Sort() { sorts.ByInt64(p) }
+func (p Int64Slice) Sort() { ByInt64(p) }
 
 // UintSlice attaches the methods of Uint64Interface to []uint, sorting in increasing order.
 type UintSlice []uint
@@ -92,7 +90,7 @@ func (p UintSlice) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
 func (p UintSlice) Key(i int) uint64 { return uint64(p[i]) }
 
 // Sort is a convenience method.
-func (p UintSlice) Sort() { sorts.ByUint64(p) }
+func (p UintSlice) Sort() { ByUint64(p) }
 
 // Uint32Slice attaches the methods of Uint64Interface to []int32, sorting in increasing order.
 type Uint32Slice []uint32
@@ -105,7 +103,7 @@ func (p Uint32Slice) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
 func (p Uint32Slice) Key(i int) uint64 { return uint64(p[i]) }
 
 // Sort is a convenience method.
-func (p Uint32Slice) Sort() { sorts.ByUint64(p) }
+func (p Uint32Slice) Sort() { ByUint64(p) }
 
 // Uint64Slice attaches the methods of Uint64Interface to []uint64, sorting in increasing order.
 type Uint64Slice []uint64
@@ -118,7 +116,7 @@ func (p Uint64Slice) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
 func (p Uint64Slice) Key(i int) uint64 { return p[i] }
 
 // Sort is a convenience method.
-func (p Uint64Slice) Sort() { sorts.ByUint64(p) }
+func (p Uint64Slice) Sort() { ByUint64(p) }
 
 type Uint128 struct{ Hi, Lo uint64 }
 
@@ -139,7 +137,7 @@ func (p Uint128Slice) Swap(i, j int) { p[i], p[j] = p[j], p[i] }
 func (p Uint128Slice) Key(i int) (uint64, uint64) { return p[i].Hi, p[i].Lo }
 
 // Sort is a convenience method.
-func (p Uint128Slice) Sort() { sorts.ByUint128(p) }
+func (p Uint128Slice) Sort() { ByUint128(p) }
 
 // Float32Slice attaches the methods of Uint64Interface to []uint32, sorting in increasing order, NaNs last.
 type Float32Slice []float32
@@ -152,7 +150,7 @@ func (p Float32Slice) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
 func (p Float32Slice) Key(i int) uint64 { return Float32Key(p[i]) }
 
 // Sort is a convenience method.
-func (p Float32Slice) Sort() { sorts.ByUint64(p) }
+func (p Float32Slice) Sort() { ByUint64(p) }
 
 // Float64Slice attaches the methods of Uint64Interface to []float64, sorting in increasing order, NaNs last.
 type Float64Slice []float64
@@ -165,7 +163,7 @@ func (p Float64Slice) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
 func (p Float64Slice) Key(i int) uint64 { return Float64Key(p[i]) }
 
 // Sort is a convenience method.
-func (p Float64Slice) Sort() { sorts.ByUint64(p) }
+func (p Float64Slice) Sort() { ByUint64(p) }
 
 // StringSlice attaches the methods of StringInterface to []string, sorting in increasing order.
 type StringSlice []string
@@ -178,7 +176,7 @@ func (p StringSlice) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
 func (p StringSlice) Key(i int) string { return p[i] }
 
 // Sort is a convenience method.
-func (p StringSlice) Sort() { sorts.ByString(p) }
+func (p StringSlice) Sort() { ByString(p) }
 
 // BytesSlice attaches the methods of BytesInterface to [][]byte, sorting in increasing order.
 type BytesSlice [][]byte
@@ -191,7 +189,7 @@ func (p BytesSlice) Swap(i, j int)      { p[i], p[j] = p[j], p[i] }
 func (p BytesSlice) Key(i int) []byte { return p[i] }
 
 // Sort is a convenience method.
-func (p BytesSlice) Sort() { sorts.ByBytes(p) }
+func (p BytesSlice) Sort() { ByBytes(p) }
 
 // Ints sorts a slice of ints in increasing order.
 func Ints(a []int) { IntSlice(a).Sort() }

@@ -4,20 +4,17 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package sorts_test
+package sorts
 
 import (
 	"fmt"
-
-	"github.com/rishabh/sorts"
-	"github.com/rishabh/sorts/sortutil"
 )
 
 func Example_flip() {
 	scores := []int{39, 492, 4912, 39, -10, 4, 92}
-	data := sortutil.IntSlice(scores)
+	data := IntSlice(scores)
 	data.Sort()
-	sorts.Flip(data) // high scores first
+	Flip(data) // high scores first
 	fmt.Println(scores)
 	// Output: [4912 492 92 39 39 4 -10]
 }

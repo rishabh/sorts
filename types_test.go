@@ -5,14 +5,12 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package sortutil_test
+package sorts
 
 import (
 	"math"
 	"sort"
 	"testing"
-
-	. "github.com/rishabh/sorts/sortutil"
 )
 
 // we need enough elements that radix sort will kick in, or we're not
