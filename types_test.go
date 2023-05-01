@@ -282,6 +282,18 @@ func TestUint64s(t *testing.T) {
 	}
 }
 
+func TestUint128s(t *testing.T) {
+	data := make([]Uint128, len(uints))
+	for i, v := range uints {
+		data[i] = Uint128{Hi: 0, Lo: uint64(v)}
+	}
+	Uint128s(data)
+	if !Uint128sAreSorted(data) {
+		t.Errorf("sorted %v", uints)
+		t.Errorf("   got %v", data)
+	}
+}
+
 func TestFloat32s(t *testing.T) {
 	data := make([]float32, len(float64s))
 	for i, v := range float64s {

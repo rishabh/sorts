@@ -209,6 +209,9 @@ func Uint32s(a []uint32) { Uint32Slice(a).Sort() }
 // Uint64s sorts a slice of uint64s in increasing order.
 func Uint64s(a []uint64) { Uint64Slice(a).Sort() }
 
+// Uint128s sorts a slice of uint128s in increasing order.
+func Uint128s(a []Uint128) { Uint128Slice(a).Sort() }
+
 // Float32s sorts a slice of uint64s in increasing order, NaNs last.
 func Float32s(a []float32) { Float32Slice(a).Sort() }
 
@@ -238,6 +241,9 @@ func Uint32sAreSorted(a []uint32) bool { return sort.IsSorted(Uint32Slice(a)) }
 
 // Uint64sAreSorted tests whether a slice of uint64s is sorted in increasing order.
 func Uint64sAreSorted(a []uint64) bool { return sort.IsSorted(Uint64Slice(a)) }
+
+// Uint128sAreSorted tests whether a slice of uint128s is sorted in increasing order.
+func Uint128sAreSorted(a []Uint128) bool { return sort.IsSorted(Uint128Slice(a)) }
 
 // Float32sAreSorted tests whether a slice of float32s is sorted in increasing order, NaNs last.
 func Float32sAreSorted(a []float32) bool { return sort.IsSorted(Float32Slice(a)) }
